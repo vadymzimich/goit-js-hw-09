@@ -55,9 +55,9 @@ function addLeadingZero(value) {
 let timer = null;
 
 startBtn.addEventListener('click', () => {
+  startBtn.disabled = true;
   timer = setInterval(() => {
     let countdown = new Date(inputField.value) - new Date();
-    startBtn.disabled = true;
     if (countdown >= 0) {
       let timeObject = convertMs(countdown);
       days.textContent = addLeadingZero(timeObject.days);

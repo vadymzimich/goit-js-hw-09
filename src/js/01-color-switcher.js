@@ -9,9 +9,10 @@ stopBtn.setAttribute('disabled', true);
 let timerId = null;
 
 const handleBodyColor = () => {
+  startBtn.setAttribute('disabled', true);
   timerId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
-    startBtn.setAttribute('disabled', true);
+
     stopBtn.removeAttribute('disabled');
   }, 1000);
 };
